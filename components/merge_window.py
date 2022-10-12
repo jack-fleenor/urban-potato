@@ -22,4 +22,4 @@ class merge_window:
       else:
         self.merged_file.append(file)
         self.merged_file.append(self.blank_page)
-    
+      
