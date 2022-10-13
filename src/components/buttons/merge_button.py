@@ -1,12 +1,14 @@
 from tkinter import Button, filedialog
+from tkinter.constants import DISABLED, NORMAL
 from PyPDF2 import PdfMerger, PdfReader
 from src.components.message.status_message import StatusMessage
+
 
 class MergeButton:
   def __init__(self, trunk, files):
     self.trunk = trunk
     self.files = files
-    self.button = Button(trunk, text="Merge", command=self.merge_files)
+    self.button = Button(trunk, text="Merge", command=self.merge_files, state=DISABLED)
     self.merged_file = PdfMerger()
     self.blank_page = PdfReader("src/assets/Blank_Page.pdf")
 
